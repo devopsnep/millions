@@ -27,3 +27,9 @@ yum -y install python-pip
 pip install py2-ipaddress
 pip install pyroute2
 ~~~
+
+## License
+
+Creative Commons Zero 1.0 Universal
+
+*"No Rights Reserved"*
