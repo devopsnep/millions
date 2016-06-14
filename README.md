@@ -28,6 +28,13 @@ pip install py2-ipaddress
 pip install pyroute2
 ~~~
 
+## Usage
+
+* Apply Requirements detailed above
+* Add IP addresses: `python add-addrs.py`
+* Start listening server: `python server.py`
+* Start connecting client: `python client.py`
+
 ## License
 
 Creative Commons Zero 1.0 Universal
