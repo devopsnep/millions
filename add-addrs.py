@@ -14,7 +14,13 @@ index = ip.link_lookup(ifname='eth1')[0]
 
 for i in range(conns):
     remoteaddr += 1
-    ip.addr('add', index, address=str(remoteaddr), mask=96)
+    try:
+        ip.addr('add', index, address=str(remoteaddr), mask=96)
+    except pyroute2.netlink.exceptions.NetlinkError as e:
+        if e.code == errno.EEXIST:
+            pass
+        else:
+            raise
     if (i%10000 == 0):
         print "added {0} addresses".format(i)
 
